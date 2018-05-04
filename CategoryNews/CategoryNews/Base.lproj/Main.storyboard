@@ -87,6 +87,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="SZd-bq-LBL" id="8GE-KG-VSk"/>
+                                </connections>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FLG-4c-3hH">
                                 <rect key="frame" x="16" y="126" width="343" height="23.5"/>
@@ -108,13 +111,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="B27-Ph-aJN" firstAttribute="leading" secondItem="FLG-4c-3hH" secondAttribute="leading" id="50Q-Tj-9ka"/>
-                            <constraint firstItem="7Ci-Zi-5o7" firstAttribute="trailing" secondItem="FLG-4c-3hH" secondAttribute="trailing" constant="16" id="G8g-ln-ypH"/>
-                            <constraint firstItem="7Ci-Zi-5o7" firstAttribute="bottom" secondItem="B27-Ph-aJN" secondAttribute="bottom" id="M4Z-I3-ndS"/>
-                            <constraint firstItem="B27-Ph-aJN" firstAttribute="trailing" secondItem="FLG-4c-3hH" secondAttribute="trailing" id="Occ-Bk-XiX"/>
-                            <constraint firstItem="B27-Ph-aJN" firstAttribute="top" secondItem="FLG-4c-3hH" secondAttribute="bottom" constant="10" id="jQD-7p-GYY"/>
-                            <constraint firstItem="FLG-4c-3hH" firstAttribute="leading" secondItem="7Ci-Zi-5o7" secondAttribute="leading" constant="16" id="kc1-4Y-zfu"/>
-                            <constraint firstItem="FLG-4c-3hH" firstAttribute="top" secondItem="7Ci-Zi-5o7" secondAttribute="top" constant="10" id="yog-dL-RZR"/>
+                            <constraint firstItem="B27-Ph-aJN" firstAttribute="bottom" secondItem="7Ci-Zi-5o7" secondAttribute="bottom" id="2ES-j9-bDT"/>
+                            <constraint firstItem="B27-Ph-aJN" firstAttribute="leading" secondItem="7Ci-Zi-5o7" secondAttribute="leading" constant="16" id="Bci-Jh-iFO"/>
+                            <constraint firstItem="FLG-4c-3hH" firstAttribute="top" secondItem="7Ci-Zi-5o7" secondAttribute="top" constant="10" id="HPs-qg-wxi"/>
+                            <constraint firstItem="7Ci-Zi-5o7" firstAttribute="trailing" secondItem="FLG-4c-3hH" secondAttribute="trailing" constant="16" id="ILE-t4-cHd"/>
+                            <constraint firstItem="B27-Ph-aJN" firstAttribute="top" secondItem="FLG-4c-3hH" secondAttribute="bottom" constant="10" id="a3l-es-HJu"/>
+                            <constraint firstItem="FLG-4c-3hH" firstAttribute="leading" secondItem="7Ci-Zi-5o7" secondAttribute="leading" constant="16" id="aHi-o2-crf"/>
+                            <constraint firstItem="7Ci-Zi-5o7" firstAttribute="trailing" secondItem="B27-Ph-aJN" secondAttribute="trailing" constant="16" id="fXA-kI-9Vg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Ci-Zi-5o7"/>
                     </view>
@@ -136,7 +139,7 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="40"/>

@@ -32,7 +32,7 @@ extension NewsTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.last! == news.count - 5 {
+        if indexPath.last! == news.count - 1 {
             loadMoreData()
         }
     }
