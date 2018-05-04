@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zoG-zr-SgN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Категории-->
+        <scene sceneID="EIi-vR-ytM">
+            <objects>
+                <tableViewController storyboardIdentifier="CategoriesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="953-L9-dAt" customClass="CategoriesTableViewController" customModule="CategoryNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rg2-my-fmr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="nH0-fF-hgV" customClass="CategoryTableViewCell" customModule="CategoryNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nH0-fF-hgV" id="pW5-ZN-vu1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="953-L9-dAt" id="AN8-jK-xO8"/>
+                            <outlet property="delegate" destination="953-L9-dAt" id="JRW-ZK-YMC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Категории" id="3ym-te-tam"/>
+                    <connections>
+                        <segue destination="nYE-px-cRS" kind="show" identifier="NewsTableViewController" id="GT7-61-Fid"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TId-Qh-7Ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549" y="-175"/>
+        </scene>
+        <!--Новости-->
+        <scene sceneID="53S-Ah-Eux">
+            <objects>
+                <tableViewController storyboardIdentifier="NewsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nYE-px-cRS" customClass="NewsTableViewController" customModule="CategoryNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qUZ-YA-tK3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" id="j23-LR-XYT" customClass="NewsTableViewCell" customModule="CategoryNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j23-LR-XYT" id="Ybw-fM-zCO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nYE-px-cRS" id="Bm5-aD-56P"/>
+                            <outlet property="delegate" destination="nYE-px-cRS" id="ZaC-tp-raq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Новости" id="QZf-7d-LNc"/>
+                    <connections>
+                        <segue destination="SZd-bq-LBL" kind="show" identifier="DetailNewsViewController" id="XmM-m7-bIV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCF-QT-Qmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="-176"/>
+        </scene>
+        <!--Detail News View Controller-->
+        <scene sceneID="XaG-8K-UPG">
+            <objects>
+                <viewController id="SZd-bq-LBL" customClass="DetailNewsViewController" customModule="CategoryNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="faT-df-twd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B27-Ph-aJN">
+                                <rect key="frame" x="16" y="159.5" width="343" height="507.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FLG-4c-3hH">
+                                <rect key="frame" x="16" y="126" width="343" height="23.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Short Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfX-0A-NBL">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ur-e2-2As">
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B27-Ph-aJN" firstAttribute="leading" secondItem="FLG-4c-3hH" secondAttribute="leading" id="50Q-Tj-9ka"/>
+                            <constraint firstItem="7Ci-Zi-5o7" firstAttribute="trailing" secondItem="FLG-4c-3hH" secondAttribute="trailing" constant="16" id="G8g-ln-ypH"/>
+                            <constraint firstItem="7Ci-Zi-5o7" firstAttribute="bottom" secondItem="B27-Ph-aJN" secondAttribute="bottom" id="M4Z-I3-ndS"/>
+                            <constraint firstItem="B27-Ph-aJN" firstAttribute="trailing" secondItem="FLG-4c-3hH" secondAttribute="trailing" id="Occ-Bk-XiX"/>
+                            <constraint firstItem="B27-Ph-aJN" firstAttribute="top" secondItem="FLG-4c-3hH" secondAttribute="bottom" constant="10" id="jQD-7p-GYY"/>
+                            <constraint firstItem="FLG-4c-3hH" firstAttribute="leading" secondItem="7Ci-Zi-5o7" secondAttribute="leading" constant="16" id="kc1-4Y-zfu"/>
+                            <constraint firstItem="FLG-4c-3hH" firstAttribute="top" secondItem="7Ci-Zi-5o7" secondAttribute="top" constant="10" id="yog-dL-RZR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Ci-Zi-5o7"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="1Ur-e2-2As" id="aOF-Mf-eeJ"/>
+                        <outlet property="fullDescriptionTextView" destination="B27-Ph-aJN" id="dbD-E7-6BE"/>
+                        <outlet property="shortDescriptionLabel" destination="yfX-0A-NBL" id="sUA-0f-zaN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18h-V5-5F1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2096" y="-177"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oHU-22-jLj">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zoG-zr-SgN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="yf8-QU-PaC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="40"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="953-L9-dAt" kind="relationship" relationship="rootViewController" id="ahO-70-H1m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARU-n0-hwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-403" y="-175"/>
+        </scene>
+    </scenes>
+</document>
